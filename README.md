@@ -1,4 +1,4 @@
-#AnimalGuessingGameFinalProject
+# AnimalGuessingGameFinalProject
 Crocifisso Pusateri,
 Final Project Proposal, 
 crocifissovpusater@lewisu.edu, 
