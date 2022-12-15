@@ -1,20 +1,30 @@
 <!DOCTYPE html>
 <html lang="en">
-<!--Crocifisso Pusateri 12/4/2022 Web Programming-->
+<!--Crocifisso Pusateri 12/15/2022 Web Programming-->
 <head>
 	<title>AnimalGuessingGame</title>
+	<link rel="stylesheet" href="index.css">
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Sora">
+    <script src="AnimalGuessingGame.js"></script>
+	<style>Body {
+		font-family: 'Sora', serif;
+	}
+	</style>
 </head>
 <body>
 	<h1>Animal Guessing Game</h1>
 	Score: <input id="Score-id" type="text" value="" size="2" disabled><br><br>
 	<button id="button">Game Information</button>
+	<button onclick ="match()">Is This A Match?</button>
+	<button onclick ="cheat()">Cheat</button>
 	<a href="mongoDB.html">Leaderboard</a><br />
 
 	<div id="infoModal" class="modal">
 		<div class="content">
 			<span class="close">&times;</span>
 			<p>Welcome to the AnimalGuessingGame. The game is simple, guess the animal type that pops up correctly and earn a point! 
-			   Rack up as many points as you can. When you are done, you can press the leaderboard link to put your score on the leaderboard. Have Fun!</p>
+			   Rack up as many points as you can. There is a cheat button that will award a point to the score when used. If you feel that you
+			   have a match then click the "Is This A Match" button to find out. When you are done, you can press the leaderboard link to put your score on the leaderboard. Have Fun!</p>
 		</div>
 	</div>
 	<script>
@@ -38,9 +48,15 @@
 			  }
 		}
 		</script>
-		<script> 
-			let response = fetch("https://as1.ftcdn.net/v2/jpg/02/48/42/64/1000_F_248426448_NVKLywWqArG2ADUxDq6QprtIzsF82dMF.jpg");
-		</script>
+
+		<input type="text" id="guess" value="Insert guess here">
+
+<select onchange="showCatBreedImage(value)" name="catBreedSelector" id="catBreedSelector"></select>
+<div>
+	<div id = "catBreedDesc"></div>
+	<hr>
+	<img id="catBreedImage"></img>
+</div>
 
 </body>
 </html>

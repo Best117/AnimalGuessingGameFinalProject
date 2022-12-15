@@ -2,8 +2,19 @@ html, body {
     height: 100%;
     margin: 0;
     padding: 0;
+    background-color: rgb(255, 131, 131); 
+}
+
+div {
+    align-items: center;
+    margin: 0;
 }
 
 h1 {
     font-family: 'Times New Roman', Times, serif;
+}
+
+img {
+    max-width: 40%;
+    height: auto;      
 }
